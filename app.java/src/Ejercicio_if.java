@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Ejercicio_if {
 
     /**
@@ -8,9 +10,9 @@ public class Ejercicio_if {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese su numero");
-        int number; scanner.nextInt();
+        int number = scanner.nextInt();
 
-        if (number > 5); {
+        if (number > 5) {
             System.out.println( number + " es un gran numero");
         } else {
             System.out.println( number + " es un pequeño numero");
