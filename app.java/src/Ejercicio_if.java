@@ -13,9 +13,9 @@ public class Ejercicio_if {
         int number = scanner.nextInt();
 
         if (number > 5) {
-            System.out.println( number + " es un gran numero");
+            System.out.println(number + " es un gran numero");
         } else {
-            System.out.println( number + " es un pequeño numero");
+            System.out.println(number + " es un pequeño numero");
         }
     }
 }
