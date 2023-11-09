@@ -22,8 +22,8 @@ public class Hundir_flota {
                 System.out.println("Te quedan: " + vidas + " balas");
                 barcos++;
                 tablero [X][Y] = false;
-            } else {
-                vidas--;
+          //  } else (){
+                vidas {--
                 System.out.println("Has fallado!");
                 System.out.println("Te quedan: " + vidas + " balas");
             }

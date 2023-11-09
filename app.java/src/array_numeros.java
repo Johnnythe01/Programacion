@@ -46,7 +46,7 @@ public class array_numeros {
             {1,1,1},
             {2,2,2},
             {3,3,3}, };
-        int resultado = 0
+        int resultados = 0;
 
         int i =0;
         while (i <tabla.length){
