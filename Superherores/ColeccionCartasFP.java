@@ -16,10 +16,10 @@ public class ColeccionCartasFP {
 
         Superheroe thor = new Superheroe();
         thor.nombre = "Thor";
-        thor.descripcion = "El dios del trueno";
+        thor.descripcion = "Hijo de Odin, Dios del trueno";
         thor.rareza = "epico";
         thor.vida = 10;
-        thor.fuerza = 7;
+        thor.fuerza = 9;
         String[] habilidadesThor = {"Volar", "Rayos"};
         thor.habilidades = habilidadesThor;
 
