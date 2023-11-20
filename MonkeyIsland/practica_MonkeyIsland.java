@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+
 public class practica_MonkeyIsland {
 
     public static void main(String[] args) {
@@ -40,6 +41,7 @@ public class practica_MonkeyIsland {
             System.out.println("2 " + insultos[2]);
             System.out.println("3 " + insultos[3]);
             System.out.println("4 " + insultos[4]);
+            if (rondas == 0 || rondas == 2 || rondas == 4 || rondas == 6){
 
             int eleccionUsuario = scanner.nextInt();
 
@@ -54,37 +56,62 @@ public class practica_MonkeyIsland {
             int indiceRespuesta = random.nextInt(4) + 1; // esta parte no tenía ni idea de como hacerla y
                                                          // necesité ayuda del chat para sacar la fórmula
                                                          // correctamente.
-            System.out.println();
-            System.out.println("Tú: " + insultoElegido);
+            System.out.println("\n Tú: " + insultoElegido);
             System.out.println("El rival: " + contestaciones[indiceRespuesta]);
 
             if (eleccionUsuario == indiceRespuesta) {
-                System.out.println("\u001B[33m Oh no, has quedado en ridículo... Tu rival ha ganado este asalto.\u001B[0m");
+                System.out.println(
+                        "\u001B[33m Oh no, has quedado en ridículo... Tu rival ha ganado este asalto.\u001B[0m");
             } else {
                 System.out.println(
                         "\u001B[34m ¡Este borracho no sabe ni lo que está diciendo! ¡Ganaste el asalto a ese pringao!\u001B[0m");
                 rondasGanadas++;
             }
 
-
-            if (rondasGanadas >= 2) {
-                break;
-            }
             System.out.println();
             rondas++;
         }
-        // aquí hago lo siguiente porque si el total son 3 rondas máximo, pero ganas o
-        // pierdes 2 seguidas desde el principio, no sería necesario hacer las 3 rondas.
-        if (rondasGanadas >= 2) {
+        }
+        // aqui cambiamos el turno
+
+            if (rondas == 1 || rondas == 2 || rondas == 3 || rondas == 5) {
+        
+            System.out.println(
+                    "\u001B[38;5;208m¡Vamos a por este cabrón! Elige una contestación:\u001B[0m");
+            System.out.println("1 " + contestaciones[1]);
+            System.out.println("2 " + contestaciones[2]);
+            System.out.println("3 " + contestaciones[3]);
+            System.out.println("4 " + contestaciones[4]);
+
+            int eleccionUsuario = scanner.nextInt();
+
+            String insultoElegido = insultos[eleccionUsuario];
+            int indiceRespuesta = random.nextInt(4) + 1; // esta parte no tenía ni idea de como hacerla y
+                                                         // necesité ayuda del chat para sacar la fórmula
+                                                         // correctamente.
             System.out.println();
-            System.out.println("\u001B[32m ¡Felicidades! ¡Ganaste la partida! \u001B[0m");
-        } else {
-            System.out.println("\u001B[31m Que pena, perdiste ante tu rival. \u001B[0m");
+            System.out.println("El rival: " + insultos[indiceRespuesta]);
+            System.out.println("Tú: " + contestaciones[eleccionUsuario]);
+
+            if (eleccionUsuario == indiceRespuesta) {
+                System.out.println(
+                        "\u001B[33m Oh no, has quedado en ridículo... Tu rival ha ganado este asalto.\u001B[0m");
+            } else {
+                System.out.println(
+                        "\u001B[34m ¡Este borracho no sabe ni lo que está diciendo! ¡Ganaste el asalto a ese pringao!\u001B[0m");
+                rondasGanadas++;
+            }
+
+            System.out.println(); // espacio vacío para que quede más bonito.
+            rondas++;
+            }
+            // aquí hago lo siguiente porque si el total son 3 rondas máximo, pero ganas o
+            // pierdes 2 seguidas desde el principio, no sería necesario hacer las 3 rondas.
+            if (rondasGanadas >= 2) {
+                System.out.println();
+                System.out.println("\u001B[32m ¡Felicidades! ¡Ganaste la partida! \u001B[0m");
+            } else {
+                System.out.println("\u001B[31m Que pena, perdiste ante tu rival. \u001B[0m");
+            }
         }
     }
-}
-/*
- * private static int calcularAleatorio(int i, int j) {
- * return 0;
- * }
- */

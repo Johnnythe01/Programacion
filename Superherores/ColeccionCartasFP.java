@@ -1,34 +1,56 @@
-import java.util.Scanner;
-
 public class ColeccionCartasFP {
-
+    
     public static void main(String[] args) {
-        Scanner escaner = new Scanner(System.in);
-        //Creamos toda nuestra coleccion de Superheroes
+        //Inicializamos nuestra coleccion de heroes:
+        Coleccion marvel = crearColeccionMarvel();
+        
+        //Pintamos todos los Superheroes de nuestra coleccion:
+        marvel.pintarInfColeccion();
+        
+        //Per fer:
+        //Crida a un metode dins Coleccio, que pinti amb un println()
+        //quina es la major força dins la nostra coleccio
+        
+        //Per fer:
+        //Crida a un metode dins Coleccio, que pinti amb un println()
+        //quin es el superheroe amb major vida i quin valor te vida
+        
+        //Per fer: 
+        //Crida a un metode dins Coleccio, que retorni amb un return 
+        //quantes cartes "legendaria" hi ha a la nostra coleccio
+        //Guarda el valor dins la variable nLegen
+        int nLegen = 0;
+        
+    }
+    
+    /**
+     * Inicializa nuestra coleccion de superheroes de marvel
+     * @return 
+     */
+    public static Coleccion crearColeccionMarvel(){
+        //Creamos los Superheroes:
         Superheroe spiderman = new Superheroe();
         spiderman.nombre = "Spiderman";
-        spiderman.descripcion = "El humilde Peter Parker.";
-        spiderman.rareza = "comun";
+        spiderman.descripcion = "Tu amigo y vecino Spiderman";
         spiderman.vida = 7;
-        spiderman.fuerza = 6;
-        String[] habilidadesSpiderman = {"Sentido aracnido", "Telaraña"};
+        spiderman.fuerza = 5;
+        String[] habilidadesSpiderman = {"Sentido arácnido", "Telarañas"};
         spiderman.habilidades = habilidadesSpiderman;
 
-        Superheroe thor = new Superheroe();
-        thor.nombre = "Thor";
-        thor.descripcion = "Hijo de Odin, Dios del trueno";
-        thor.rareza = "epico";
-        thor.vida = 10;
-        thor.fuerza = 9;
-        String[] habilidadesThor = {"Volar", "Rayos"};
-        thor.habilidades = habilidadesThor;
-
-        spiderman.pintarInformacion();
-        thor.pintarInformacion();
-
-        ColeccionSuperheroe marvel = new ColeccionSuperheroe();
-        marvel.superheroes = new Superheroe[] {spiderman, thor};
-
-        marvel.pintarInfColeccion();
+        Superheroe ironman = new Superheroe("Ironman", 7, 7);
+        ironman.descripcion = "Tecnologia Stark";
+        ironman.rareza = "epico";
+        ironman.habilidades = new String[]{"Volar", "Super fuerza"};
+        
+        Superheroe thor = new Superheroe("Thor", 8, 8);
+        thor.descripcion = "Thor, hijo de Odín";
+        thor.rareza = "legendario";
+        thor.habilidades = new String[]{"Volar", "Super fuerza", "Martillo"};
+        
+        //Creamos la Coleccion con los superheroes anteriores:
+        Coleccion coleccion = new Coleccion();
+        coleccion.superheroes = new Superheroe[]{spiderman, ironman, thor};
+        return coleccion;
     }
+    
 }
