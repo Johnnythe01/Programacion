@@ -1,29 +1,3 @@
-/*public class Factura {
-
-    public static void main(String[] args) {
-        double factura = 0;
-        double coste = 0;
-        double iva = coste * 0.21;
-
-        System.out.println("introduzca el coste de su articulo para obtener la factura:");
-         (iva = factura = coste * iva);
-    }
-}
-
-*/
-
-public class Factura {
-
-    public static void main(String[] args) {
-        //Creamos una nueva factura mediante su constructor.
-        Factura factura1 = new Factura(1, 500);
-        
-        //Llamamos a su método imprimir()
-        factura1.imprimir();
-    }
-    
-}
-
 /**
  * Ejercicio 1 - Orientación a Objetos Java
  */
