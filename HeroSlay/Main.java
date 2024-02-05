@@ -20,9 +20,9 @@ public static void main (String[] args) {
     Heroe.imprimirInformacion();
     Villano.imprimirInformacion();
 
-    while (vida > 0) {
+    while (Heroe.getVida() > 0) {
         System.out.println("Héroe! prepara tus cartas, ha aparecido un peligroso villano frente a ti!");
-        
+
     }
 
     }   
