@@ -8,9 +8,10 @@ public class Personaje {
     private List<Carta> mazo;
     private int ronda = 3;
 
-    public Personaje(String nombre, int vida) {
+    public Personaje(String nombre, int vida, List<Carta> mazo) {
         this.nombre = nombre;
         this.vida = vida;
+        this.mazo = mazo;
     }
     public void imprimirInformacion() {
         System.out.println("Nombre del personaje: " + nombre);
