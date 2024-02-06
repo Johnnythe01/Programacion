@@ -25,7 +25,7 @@ public static void main (String[] args) {
 
     }
 
-    }   
+    }
 }
 
 /*1) Mostraremos la información de ambos jugadores.
