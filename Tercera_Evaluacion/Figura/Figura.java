@@ -1,4 +1,4 @@
-package Figura;
+package Tercera_Evaluacion.Figura;
 
 public abstract class Figura {
 

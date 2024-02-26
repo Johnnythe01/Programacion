@@ -1,4 +1,4 @@
-package TorneoPadelParejas;
+package Segunda_Evaluacion.TorneoPadelParejas;
 
 /**
  * Equipo formado por 2 personas (Torneo de Padel)

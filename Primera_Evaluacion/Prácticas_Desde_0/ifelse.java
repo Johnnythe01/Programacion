@@ -1,4 +1,4 @@
-package Prácticas_Desde_0;
+package Primera_Evaluacion.Prácticas_Desde_0;
 
 import java.util.Scanner;
 

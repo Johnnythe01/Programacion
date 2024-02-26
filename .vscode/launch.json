@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "VehiculosApp",
+            "request": "launch",
+            "mainClass": "Tercera_Evaluacion.Vehiculo.VehiculosApp",
+            "projectName": "Programacion_60f8c93c"
+        },
+        {
+            "type": "java",
+            "name": "FigurasApp",
+            "request": "launch",
+            "mainClass": "Figura.FigurasApp",
+            "projectName": "Programacion_60f8c93c"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",

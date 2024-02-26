@@ -1,4 +1,4 @@
-package TorneoPadelParejas;
+package Segunda_Evaluacion.TorneoPadelParejas;
 
 import java.util.ArrayList;
 import java.util.List;

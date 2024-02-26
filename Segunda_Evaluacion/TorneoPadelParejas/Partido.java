@@ -1,4 +1,4 @@
-package TorneoPadelParejas;
+package Segunda_Evaluacion.TorneoPadelParejas;
 
 /**
  * Partido de Padel entre 2 parejas
