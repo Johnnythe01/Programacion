@@ -8,5 +8,9 @@ public class Coche extends Vehiculo {
         super(ruedas, matricula);
     }
 
-    
+    @Override
+    public String toString() {
+        return "Coche [puertas=" + puertas + getRuedas() + getMatricula()+"]";
+    }
+
 }

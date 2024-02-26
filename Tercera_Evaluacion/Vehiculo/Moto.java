@@ -6,5 +6,9 @@ public class Moto extends Vehiculo{
         super(ruedas, matricula);    
     }
 
+    @Override
+    public String toString() {
+        return "Coche [" + getRuedas() + getMatricula()+"]";
+    }
 
 }
