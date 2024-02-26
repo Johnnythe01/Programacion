@@ -23,6 +23,6 @@ public class Circulo extends Figura{
 
     @Override
     public double calcularPerimetro() {
-        return 0;
+        return 2 * 3.14 * radio;
     }
 }

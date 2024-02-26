@@ -3,6 +3,8 @@ package Figura;
 public class Rectangulo extends Figura {
 
     private double base;
+    private double altura;
+
     public double getBase() {
         return base;
     }
@@ -10,8 +12,6 @@ public class Rectangulo extends Figura {
     public void setBase(double base) {
         this.base = base;
     }
-
-    private double altura;
 
     public double getAltura() {
         return altura;
@@ -28,12 +28,11 @@ public class Rectangulo extends Figura {
 
     @Override
     public double calcularArea() {
-        
-        return 0;
+        return base * altura;
     }
 
     @Override
     public double calcularPerimetro() {
-        return 0;
+        return base * 2 + altura * 2;
     }
 }

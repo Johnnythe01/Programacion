@@ -18,12 +18,11 @@ public class Cuadrado extends Figura {
 
     @Override
     public double calcularArea() {
-        double ar = this.lado*this.lado;
-        return ar;
+        return this.lado*this.lado;
     }
 
     @Override
     public double calcularPerimetro() {
-        return 0;
+        return lado * 4;
     }
 }
