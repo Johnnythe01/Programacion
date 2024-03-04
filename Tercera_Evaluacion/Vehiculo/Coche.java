@@ -6,11 +6,12 @@ public class Coche extends Vehiculo {
 
     public Coche(int ruedas, String matricula, int puertas) {
         super(ruedas, matricula);
+        this.puertas = puertas;
     }
 
     @Override
     public String toString() {
-        return "Coche [puertas=" + puertas + getRuedas() + getMatricula()+"]";
+        return puertas + " puertas, " + getRuedas() + " ruedas " + "y matricula " + getMatricula();
     }
 
 }

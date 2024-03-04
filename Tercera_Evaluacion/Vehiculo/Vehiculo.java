@@ -12,11 +12,11 @@ public abstract class Vehiculo {
     }
 
     public int getRuedas(){
-        return getRuedas();
+        return ruedas;
     }
 
-    public int getMatricula (){
-        return getMatricula();
+    public String getMatricula (){
+        return matricula;
     }
 
     }
