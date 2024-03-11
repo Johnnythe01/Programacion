@@ -11,18 +11,25 @@ public class ProductosApp {
     public static void main (String[] args) throws FileNotFoundException, IOException{
         HashMap<Integer, Producto> inventario = new HashMap<>();
 
-        String pathAbsoluto = "C:\\Users\\alumne-DAM\\productos.txt";
+        String pathAbsoluto = "C:\\Users\\alumne-DAM\\Desktop\\productos.txt";
         BufferedReader br = new BufferedReader(new FileReader(pathAbsoluto));
 
-        String text = br.readLine();
-        while (text != null){
-            String[] linia = text.split(",");
+        String linea = br.readLine();
+        while (linea != null){
+            String[] partesLinea = linea.split(",");
 
-            System.out.println(linia[0]);
-            System.out.println(linia[1]);
-            System.out.println(linia[2]);
-            text = br.readLine();
+            
+            Producto producto = new Producto ();
+            producto.setCodigo(Integer.valueOf(partesLinea[0]));
+            producto.setNombre(partesLinea[1]);
+            producto.setPrecio(Double.valueOf(partesLinea[2]));
+
+            inventario.put(producto.getCodigo(), producto);
+
+            linea = br.readLine();
+        
         }
+        
         System.out.println("por favor, introduce un código de producto: ");
         Scanner scanner = new Scanner (System.in);
         
